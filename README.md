@@ -57,7 +57,7 @@ lib_deps =
 
 ### MQTT-Konfiguration
 ```cpp
-#define MQTT_SERVER "192.168.20.137"
+#define MQTT_SERVER "192.168.0.0" // Replace with your MQTT broker IP
 #define MQTT_PORT 1884
 #define MQTT_CLIENT_ID "seismograph"
 #define MQTT_USER "username"
