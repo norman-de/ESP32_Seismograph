@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ESP32 Seismograph</title>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <script src='https://cdn.jsdelivr.net/npm/chart.js'></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class='container'>
+        <h1>🌍 ESP32 Seismograph Monitor</h1>
+        
+        <div class='grid'>
+            <div class='chart-box'>
+                <h3>📈 Live Sensor Data</h3>
+                <canvas id='sensorChart' width='400' height='200'></canvas>
+            </div>
+            <div class='status-box'>
+                <h3>📊 System Status</h3>
+                <div id='status'>Loading...</div>
+            </div>
+        </div>
+        
+        <div class='grid'>
+            <div class='event-overview'>
+                <h3>📋 Event Overview</h3>
+                <div class='event-controls'>
+                    <label for='eventFilter'>Filter: </label>
+                    <select id='eventFilter' onchange='filterEvents()'>
+                        <option value='all'>All Events</option>
+                        <option value='Micro'>Micro Events</option>
+                        <option value='Minor'>Minor Events</option>
+                        <option value='Light'>Light Events</option>
+                        <option value='Moderate'>Moderate Events</option>
+                        <option value='Strong'>Strong Events</option>
+                        <option value='Major'>Major Events</option>
+                    </select>
+                    <span id='eventStats' style='margin-left: 20px; font-weight: bold;'></span>
+                </div>
+                <div id='eventsList'>Loading events...</div>
+            </div>
+            
+            <div class='controls-box'>
+                <h3>⚙️ Controls & Debug</h3>
+                <button class='btn btn-danger' onclick='restart()'>🔄 Restart System</button>
+            </div>
+        </div>
+        
+        <div class='sensor-data'>
+            <h3>🔢 Current Sensor Data</h3>
+            <div id='sensorData'>Loading...</div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
