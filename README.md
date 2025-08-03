@@ -14,6 +14,10 @@ Dieses Projekt implementiert einen vollwertigen digitalen Seismographen mit folg
 - **Automatische Kalibrierung** und adaptive Schwellenwerte
 - **OTA Updates** für Remote-Wartung
 
+## 📷 Screenshot
+![Web Interface](img/web_interface.png)
+
+
 ## 🔧 Hardware-Anforderungen
 
 ### Hauptkomponenten
